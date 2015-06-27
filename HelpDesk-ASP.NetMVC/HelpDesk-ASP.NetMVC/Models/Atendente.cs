@@ -16,7 +16,7 @@ namespace HelpDesk_ASP.NetMVC.Models
 
         [Required(ErrorMessage = "Preencha o Apelido do Atendente.")]
         public string Apelido { get; set; }
-        public bool EhAdministrador { get; set; }
+        public bool IsAdministrador { get; set; }
 
         [Required(ErrorMessage = "Preencha o Peso do Atendente.")]
         public int Peso { get; set; }

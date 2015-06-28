@@ -1,25 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace HelpDesk_ASP.NetMVC.Models
 {
-    class Atendente
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    [Table("Atendente")]
+    public partial class Atendente
     {
+        [Key]
         public int CodAtendente { get; set; }
-
-        [Required(ErrorMessage = "Preencha o nome do Atendente.")]
         public string Nome { get; set; }
-
-        [Required(ErrorMessage = "Preencha o Apelido do Atendente.")]
-        public string Apelido { get; set; }
-        public bool IsAdministrador { get; set; }
-
-        [Required(ErrorMessage = "Preencha o Peso do Atendente.")]
-        public int Peso { get; set; }
-
+        public int CodDepta { get; set; }
+        public virtual Departamento Departamento { get; set; }
     }
 }

@@ -1,20 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace HelpDesk_ASP.NetMVC.Models
 {
-    class Contato
-    {
-        public int CodContato { get; set; }
-        [Required(ErrorMessage = "Preencha o nome do contato")]
-        public string Nome { get; set; }
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
-        [Required(ErrorMessage = "Preencha o e-mail do contato")]
+    [Table("Contato")]
+    public partial class Contato
+    {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Contato()
+        {
+            Suporte = new HashSet<Suporte>();
+        }
+
+        [Key]
+        public int CodContato { get; set; }
+        public string Nome { get; set; }
         public string Email { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Suporte> Suporte { get; set; }
     }
 }

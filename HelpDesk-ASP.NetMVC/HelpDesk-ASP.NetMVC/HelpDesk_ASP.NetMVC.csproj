@@ -39,11 +39,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -59,9 +68,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -130,10 +136,22 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Atendente.cs" />
+    <Compile Include="Models\AtendenteMetadado.cs" />
+    <Compile Include="Models\Avaliacao.cs" />
+    <Compile Include="Models\AvaliacaoMetadado.cs" />
     <Compile Include="Models\Contato.cs" />
+    <Compile Include="Models\ContatoMetadado.cs" />
     <Compile Include="Models\Departamento.cs" />
-    <Compile Include="Models\SuporteStatus.cs" />
-    <Compile Include="Models\SuporteTipo.cs" />
+    <Compile Include="Models\DepartamentoMetadado.cs" />
+    <Compile Include="Models\HelpDesk.cs" />
+    <Compile Include="Models\Interacao.cs" />
+    <Compile Include="Models\InteracaoMetadado.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\StatusMatadado.cs" />
+    <Compile Include="Models\Suporte.cs" />
+    <Compile Include="Models\SuporteMetadado.cs" />
+    <Compile Include="Models\Tipo.cs" />
+    <Compile Include="Models\TipoMetadado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

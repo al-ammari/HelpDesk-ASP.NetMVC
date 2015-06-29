@@ -28,10 +28,6 @@ namespace HelpDesk_ASP.NetMVC.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Avaliacao>()
-                .Property(e => e.Nota)
-                .IsFixedLength();
-
-            modelBuilder.Entity<Avaliacao>()
                 .Property(e => e.Comentario)
                 .IsUnicode(false);
 
@@ -94,7 +90,7 @@ namespace HelpDesk_ASP.NetMVC.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Tipo>()
-                .Property(e => e.Tipo)
+                .Property(e => e.Descricao)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Tipo>()

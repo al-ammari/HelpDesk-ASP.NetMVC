@@ -17,7 +17,7 @@ namespace HelpDesk_ASP.NetMVC.Models
 
         [Key]
         public int CodTipo { get; set; }
-        public string Tipo { get; set; }
+        public string Descricao { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Suporte> Suporte { get; set; }

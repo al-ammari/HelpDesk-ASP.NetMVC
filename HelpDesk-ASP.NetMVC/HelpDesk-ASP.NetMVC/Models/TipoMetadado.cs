@@ -15,7 +15,7 @@ namespace HelpDesk_ASP.NetMVC.Models
     public class TipoMetadado
     {
         [Required(ErrorMessage = "Obrigatório informar o Tipo!")]
-        [StringLength(50, ErrorMessage = "O Tipo deve possuir no máximo 50 caracteres!")]
-        public string Tipo { get; set; }
+        [StringLength(50, ErrorMessage = "A descrição deve possuir no máximo 50 caracteres!")]
+        public string Descricao { get; set; }
     }
 }
